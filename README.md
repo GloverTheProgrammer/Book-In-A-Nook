@@ -10,7 +10,7 @@ MongoDB
 
 Documentation - Sam, Vinh
 
-Deployment (later down the line) - Sam
+Deployment (later down the line) - Sam, David
 Vercel
 Haroku
 Netifly
