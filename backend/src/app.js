@@ -9,17 +9,17 @@ const authRoutes = require("./routes/login");
 
 // middleware
 app.use(cors());
+app.use(express.json());
 
 // routes
-app.use("/api/users", createUser);
+app.use("/api/createUser", createUser);
 app.use("/api/login", authRoutes);
 
 // database connection 
 connection();
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
-
 
 // Server Running
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
 app.get('/', (req, res) => res.send('Server Running'));
