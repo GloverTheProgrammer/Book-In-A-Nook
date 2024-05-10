@@ -1,3 +1,8 @@
+// app.js (javascript)
+// Benjamin, Sam, Vinh, David
+// Started: 
+// Last edited: 2024-05-10 (yyyy mm dd)
+
 require('dotenv').config();
 const connection = require("./db");
 const express = require('express');

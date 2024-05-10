@@ -1,3 +1,8 @@
+// db.js (javascript)
+// Benjamin, Sam, Vinh, David
+// Started: 
+// Last edited: 2024-05-10 (yyyy mm dd)
+
 const mongoose = require("mongoose");
 
 module.exports = () => {

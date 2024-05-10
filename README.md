@@ -1,3 +1,8 @@
+ # README.md (markdown)
+ # Benjamin, Sam, Vinh, David
+ # Started: 
+ # Last edited: 2024-05-10 (yyyy mm dd)
+
 Frontend - Sam, Ben
 React
 
