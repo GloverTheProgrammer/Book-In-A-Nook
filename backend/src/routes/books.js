@@ -31,6 +31,8 @@ router.get("/search", async (req, res) => {
             const detailsUrl = `${GOOGLE_BOOKS_API_URL}/${book.id}?key=${apiKey}`;
             const detailsResponse = await axios.get(detailsUrl);
             const volumeInfo = detailsResponse.data.volumeInfo;
+            
+            // Returns to frontend this info depending on whats in googlebook's DB
             return {
                 id: book.id,
                 title: volumeInfo.title,
@@ -51,8 +53,3 @@ router.get("/search", async (req, res) => {
 
 module.exports = router;
 
-
-/*
-TODO
-add in google books api
-*/
