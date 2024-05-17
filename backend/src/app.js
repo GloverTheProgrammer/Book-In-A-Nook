@@ -10,6 +10,7 @@ const cors = require('cors');
 const app = express();
 const createUser = require("./routes/createUser");
 const authRoutes = require("./routes/login");
+const bookRoutes = require("./routes/books");
 
 
 // middleware
@@ -19,6 +20,7 @@ app.use(express.json());
 // routes
 app.use("/api/createUser", createUser);
 app.use("/api/login", authRoutes);
+app.use("/api/books", bookRoutes);
 
 // database connection 
 connection();
