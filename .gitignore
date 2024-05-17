@@ -1,4 +1,10 @@
+ # .gitignore (gitignore)
+ # Benjamin, Sam, Vinh, David
+ # Started: 
+ # Last edited: 2024-05-10 (yyyy mm dd)
 
-backend/.env
-backend/node_modules
-frontend/node_modules
+.env
+
+.vs/
+node_modules/
+
