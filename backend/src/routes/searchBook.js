@@ -10,8 +10,8 @@ const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 router.get("/", async (req, res) => { // Changed to "/" to match the route prefix
     const { title, author, isbn, iccn, publisher } = req.query;
 
-    if (!title || !author) {
-        return res.status(400).send({ message: "Title and author are required" });
+    if (!title) {
+        return res.status(400).send({ message: "Title is required" });
     }
 
     let query = `intitle:${title}+inauthor:${author}`;

@@ -89,7 +89,6 @@ const Main = () => {
                     name="author"
                     onChange={(e) => setAuthor(e.target.value)}
                     value={author}
-                    required
                     className={styles.input}
                 />
                 <button type="submit" className={styles.green_btn}>
