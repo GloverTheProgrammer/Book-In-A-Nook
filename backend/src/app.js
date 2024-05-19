@@ -10,7 +10,11 @@ const cors = require('cors');
 const app = express();
 const createUser = require("./routes/createUser");
 const authRoutes = require("./routes/login");
-const bookRoutes = require("./routes/books");
+const searchBooksRoute = require("./routes/searchBook");
+const addBooksRoute = require("./routes/addBook");
+const allBooksRoute = require("./routes/allBooks");
+const removeBookRoute = require("./routes/removeBook");
+
 
 
 // middleware
@@ -20,7 +24,10 @@ app.use(express.json());
 // routes
 app.use("/api/createUser", createUser);
 app.use("/api/login", authRoutes);
-app.use("/api/books", bookRoutes);
+app.use("/api/books", searchBooksRoute);
+app.use("/api/addBook", addBooksRoute); 
+app.use("/api/allBooks", allBooksRoute); 
+app.use("/api/removeBook", removeBookRoute);
 
 // database connection 
 connection();
