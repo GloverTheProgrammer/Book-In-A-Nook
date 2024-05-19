@@ -7,17 +7,14 @@ dotenv.config();
 const router = express.Router();
 const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
-router.get("/search", async (req, res) => {
-    
-    // Requires title and author, other fields are optional
+router.get("/", async (req, res) => { // Changed to "/" to match the route prefix
     const { title, author, isbn, iccn, publisher } = req.query;
 
-    if (!title || !author) {
-        return res.status(400).send({ message: "Title and author are required" });
+    if (!title) {
+        return res.status(400).send({ message: "Title is required" });
     }
 
     let query = `intitle:${title}+inauthor:${author}`;
-
     if (isbn) query += `+isbn:${isbn}`;
     if (iccn) query += `+lccn:${iccn}`;
     if (publisher) query += `+inpublisher:${publisher}`;
@@ -25,16 +22,10 @@ router.get("/search", async (req, res) => {
     try {
         const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
         const url = `${GOOGLE_BOOKS_API_URL}?q=${query}&key=${apiKey}`;
-
         const response = await axios.get(url);
         const books = response.data.items || [];
-
-        const bookDetails = await Promise.all(books.map(async (book) => {
-            const detailsUrl = `${GOOGLE_BOOKS_API_URL}/${book.id}?key=${apiKey}`;
-            const detailsResponse = await axios.get(detailsUrl);
-            const volumeInfo = detailsResponse.data.volumeInfo;
-            
-            // Returns to frontend this info depending on whats in googlebook's DB
+        const bookDetails = books.map(book => {
+            const volumeInfo = book.volumeInfo;
             return {
                 id: book.id,
                 title: volumeInfo.title,
@@ -44,8 +35,7 @@ router.get("/search", async (req, res) => {
                 description: volumeInfo.description,
                 imageLinks: volumeInfo.imageLinks
             };
-        }));
-
+        });
         res.status(200).send(bookDetails);
     } catch (error) {
         console.error(error.response ? error.response.data : error.message);
@@ -54,4 +44,3 @@ router.get("/search", async (req, res) => {
 });
 
 module.exports = router;
-

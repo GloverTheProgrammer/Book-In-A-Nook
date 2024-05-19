@@ -11,18 +11,18 @@ import Library from "./components/Library";
 import AddBook from "./components/AddBook";
 
 function App() {
-	const user = localStorage.getItem("token");
+    const user = localStorage.getItem("token");
 
-	return (
-		<Routes>
-			{user && <Route path="/" exact element={<Main />} />}
-			<Route path="/signup" exact element={<Signup />} />
-			<Route path="/login" exact element={<Login />} />
-			<Route path="/library/add-book" exact element={<AddBook />} />
-			<Route path="/library" exact element={<Library />} />
-			<Route path="/" element={<Navigate replace to="/login" />} />
-		</Routes>
-	);
+    return (
+        <Routes>
+            {user && <Route path="/" exact element={<Main />} />}
+            <Route path="/signup" exact element={<Signup />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/library/add-book" exact element={<AddBook />} />
+            <Route path="/library" exact element={<Library />} />
+            <Route path="/" element={<Navigate replace to={user ? "/" : "/login"} />} />
+        </Routes>
+    );
 }
 
 export default App;
