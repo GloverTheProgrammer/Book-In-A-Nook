@@ -10,8 +10,8 @@ const router = express.Router();
 const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
 // Route to add a book to the user's library
-router.post("/add", auth, async (req, res) => {
-    const { google_books_id } = req.body;
+router.post("/:id", auth, async (req, res) => {
+    const google_books_id = req.params.id;
 
     if (!google_books_id) {
         return res.status(400).send({ message: "Google Books ID is required" });

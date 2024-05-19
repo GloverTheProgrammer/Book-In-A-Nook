@@ -5,8 +5,8 @@ const auth = require("../middleware/auth");
 const router = express.Router();
 
 // Route to remove a book from the user's library
-router.delete("/", auth, async (req, res) => {
-    const { google_books_id } = req.body;
+router.delete("/:id", auth, async (req, res) => {
+    const google_books_id = req.params.id;
 
     if (!google_books_id) {
         return res.status(400).send({ message: "Google Books ID is required" });
