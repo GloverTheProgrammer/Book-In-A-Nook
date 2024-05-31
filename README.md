@@ -1,7 +1,8 @@
 # Book in a Nook
 <div align="center">
-  <img src="https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/495308a9-d558-487a-8ee9-48e46f38bb1e" alt="Book in a Nook Icon" />
+  <img src="https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/495308a9-d558-487a-8ee9-48e46f38bb1e" alt="Book in a Nook Icon" width="300" />
 </div>
+
 
 
 
