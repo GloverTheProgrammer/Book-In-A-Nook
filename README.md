@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
- README.md 
-=======
 # Book in a Nook
->>>>>>> Stashed changes
 
 **Book in a Nook** is a virtual bookshelf application designed to help users manage their personal book collections effortlessly. The application allows users to search for books, add them to their library, and organize their collections efficiently.
 
