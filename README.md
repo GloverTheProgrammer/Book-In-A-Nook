@@ -1,9 +1,8 @@
 # Book in a Nook
-<p align="center">
-![tempImageZ1rbRg_1-removebg-preview-2](https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/dced2dab-9cea-45cf-a56d-f69efe193649)
-</p>
 
-
+<div align="center">
+  <img src="https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/dced2dab-9cea-45cf-a56d-f69efe193649" alt="Book in a Nook Icon" />
+</div>
 **Book in a Nook** is a virtual bookshelf application designed to help users manage their personal book collections effortlessly. The application allows users to search for books, add them to their library, and organize their collections efficiently.
 
 ## Features
