@@ -1,5 +1,6 @@
 # Book in a Nook
-![tempImage9zbixM 1](https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/4273f02b-a788-4519-97f8-6a55c07cd5f4)
+![tempImageZ1rbRg_1-removebg-preview-2](https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/6f63eb89-9d81-4845-ad0d-7a261b0b321f)
+
 
 
 **Book in a Nook** is a virtual bookshelf application designed to help users manage their personal book collections effortlessly. The application allows users to search for books, add them to their library, and organize their collections efficiently.
