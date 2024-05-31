@@ -5,8 +5,6 @@
 
 **Book in a Nook** is a virtual bookshelf application designed to help users manage their personal book collections effortlessly. The application allows users to search for books, add them to their library, and organize their collections efficiently. As college students who love to read books, we wanted to make something to help other bookworms!
 
-## Creators
-Ben, Sam, Vinh, and David
 
 ## Features
 
