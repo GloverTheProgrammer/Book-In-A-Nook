@@ -1,10 +1,11 @@
+Sure, here is the edited README with a "How to Run" section replacing the "Contributing" section:
+
 # Book in a Nook
 <div align="center">
   <img src="https://github.com/GloverTheProgrammer/Book-In-A-Nook/assets/117209189/495308a9-d558-487a-8ee9-48e46f38bb1e" alt="Book in a Nook Icon" width="300" />
 </div>
 
 **Book in a Nook** is a virtual bookshelf application designed to help users manage their personal book collections effortlessly. The application allows users to search for books, add them to their library, and organize their collections efficiently. As college students who love to read books, we wanted to make something to help other bookworms!
-
 
 ## Features
 
@@ -37,12 +38,32 @@
 - **Database:**
   - MongoDB
 
-## Contributing
+## How to Run
 
-We welcome contributions! If you have any ideas or improvements, please feel free to submit a pull request.
+To run this project locally, follow these steps:
 
-1. **Fork the project.**
-2. **Create your feature branch** (`git checkout -b feature/AmazingFeature`).
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`).
-4. **Push to the branch** (`git push origin feature/AmazingFeature`).
-5. **Open a pull request.**
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/GloverTheProgrammer/Book-In-A-Nook.git
+    ```
+
+2. **Install Dependencies:**
+
+    - **Backend:**
+      ```bash
+      cd backend
+      npm install
+      npm run start
+      ```
+
+    - **Frontend:**
+      Open a new terminal window/tab:
+      ```bash
+      cd frontend
+      npm install
+      npm run start
+      ```
+
+By following these steps, you should be able to run the application locally on your machine. The backend will start on the specified port (default is 8080), and the frontend will start on port 3000.
+
+Feel free to reach out if you encounter any issues or have any questions!
