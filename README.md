@@ -45,7 +45,12 @@ To run this project locally, follow these steps:
     git clone https://github.com/GloverTheProgrammer/Book-In-A-Nook.git
     ```
 
-2. **Install Dependencies:**
+2. **Checkout the `local` Branch:**
+    ```bash
+    git checkout local
+    ```
+
+3. **Install Dependencies:**
 
     - **Backend:**
       ```bash
