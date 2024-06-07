@@ -18,7 +18,7 @@ const Main = () => {
                     navigate("/login");
                     return;
                 }
-                const url = "http://localhost:8080/api/allBooks";
+                const url = "https://book-in-a-nook.onrender.com/api/allBooks";
                 const response = await axios.get(url, {
                     headers: {
                         "x-auth-token": token
@@ -51,7 +51,7 @@ const Main = () => {
                 setError("You must be logged in to remove a book.");
                 return;
             }
-            const url = `http://localhost:8080/api/removeBook/${googleBooksId}`;
+            const url = `https://book-in-a-nook.onrender.com/api/removeBook/${googleBooksId}`;
             await axios.delete(url, {
                 headers: {
                     "x-auth-token": token
