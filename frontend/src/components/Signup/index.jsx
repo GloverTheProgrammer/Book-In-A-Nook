@@ -19,7 +19,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/createUser";
+			const url = "https://book-in-a-nook.onrender.com/api/createUser";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);

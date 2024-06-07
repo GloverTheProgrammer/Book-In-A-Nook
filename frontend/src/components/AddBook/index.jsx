@@ -17,7 +17,7 @@ const Main = () => {
         console.log("Searching for books with title:", title, "and author:", author);
         
         try {
-            const url = `http://localhost:8080/api/search?title=${title}&author=${author}`;
+            const url = `https://book-in-a-nook.onrender.com/api/search?title=${title}&author=${author}`;
             const response = await axios.get(url);
             setSearchResults(response.data);
             console.log("Search results:", response.data);
@@ -39,7 +39,7 @@ const Main = () => {
                 setError("You must be logged in to add a book.");
                 return;
             }
-            const url = `http://localhost:8080/api/addBook/${googleBooksId}`;
+            const url = `https://book-in-a-nook.onrender.com/api/addBook/${googleBooksId}`;
             await axios.post(url, {}, {
                 headers: {
                     "x-auth-token": token
